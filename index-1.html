@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Samara Geospatial | Large-scale drone mapping and environmental solutions</title>
+<meta name="description" content="Samara Geospatial does large-scale drone mapping, geospatial data processing and environmental solutions from Chennai. Orthomosaics, elevation models and classified point clouds.">
+<meta name="theme-color" content="#283A72">
+<meta property="og:title" content="Samara Geospatial">
+<meta property="og:description" content="Large-scale drone mapping, geospatial data and environmental solutions. Precision from above. Answers on the ground.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20120%20120%22%20width%3D%2264%22%20height%3D%2264%22%20role%3D%22img%22%20aria-label%3D%22Samara%20Geospatial%20mark%2C%20small-size%20version%22%3E%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%2254%22%20fill%3D%22none%22%20stroke%3D%22%23283A72%22%20stroke-width%3D%227%22/%3E%3Cpath%20d%3D%22M60%2060%20C54%2038%2068%2016%2098%2010%20C104%2038%2088%2056%2060%2060%20Z%22%20fill%3D%22%23283A72%22/%3E%3Cpath%20d%3D%22M60%2060%20C54%2038%2068%2016%2098%2010%20C104%2038%2088%2056%2060%2060%20Z%22%20fill%3D%22%23E3A33B%22%20transform%3D%22rotate%28180%2060%2060%29%22/%3E%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%228%22%20fill%3D%22%23283A72%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Poppins:wght@400;500;700&display=swap">
+<style>
+/* Layout: one 12-column grid so every left and right edge lines up, an 8px spacing scale, square corners, and circles and hairlines taken from the Rotor mark. Navy and white lead; amber (the Rotor wing) marks actions and waypoints, always as a fill, never as text on white. */
+:root{
+  --surface:#FFFFFF; --raised:#F3F5FA; --ink:#283A72; --muted:#586482;
+  --brand:#283A72; --on-brand:#FFFFFF; --brand-text:#283A72;
+  --accent:#E3A33B; --on-accent:#283A72; --tint:#DCE2F0; --hairline:#DADFEA;
+  --ctrl:#66729A; --focus:#283A72;
+  --hero-bg:#283A72; --hero-ov:40,58,114; --hero-fg:#FFFFFF; --hero-muted:#C5CDE6;
+  --logo-l:block; --logo-d:none;
+  --gut:clamp(16px,2.4vw,32px);
+  --font-sans:"Poppins","Helvetica Neue",Arial,sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --surface:#283A72; --raised:#32468B; --ink:#FFFFFF; --muted:#C5CDE6;
+    --brand:#FFFFFF; --on-brand:#283A72; --brand-text:#FFFFFF;
+    --tint:#3E53A0; --hairline:#4A5E9C; --ctrl:#9FADD6; --focus:#E3A33B;
+    --hero-bg:#32468B; --hero-ov:50,70,139; --logo-l:none; --logo-d:block; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --surface:#283A72; --raised:#32468B; --ink:#FFFFFF; --muted:#C5CDE6;
+  --brand:#FFFFFF; --on-brand:#283A72; --brand-text:#FFFFFF;
+  --tint:#3E53A0; --hairline:#4A5E9C; --ctrl:#9FADD6; --focus:#E3A33B;
+  --hero-bg:#32468B; --hero-ov:50,70,139; --logo-l:none; --logo-d:block; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:88px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--surface);color:var(--ink);font-family:var(--font-sans);font-size:16px;line-height:24px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,ul,ol,dl,dd{margin:0}
+ul,ol{padding:0;list-style:none}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.on-hero :focus-visible{outline-color:var(--hero-fg)}
+.skip{position:absolute;left:16px;top:-100px;background:var(--brand);color:var(--on-brand);padding:8px 16px;z-index:20}
+.skip:focus{top:8px}
+.wrap{max-width:1200px;margin-inline:auto;padding-inline:max(16px,4vw)}
+.g12{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut)}
+.s-l{grid-column:1/span 6}
+.s-r{grid-column:8/span 5}
+.sec{padding-block:clamp(64px,8vw,96px)}
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:12px;line-height:16px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--brand-text);margin-bottom:16px}
+.eyebrow::before{content:"";flex:none;width:24px;height:3px;background:var(--accent)}
+.on-hero .eyebrow{color:var(--hero-muted)}
+h2{font-size:clamp(28px,3.4vw,40px);line-height:1.2;font-weight:500;letter-spacing:-.01em;text-wrap:balance;max-width:20ch}
+h3{font-size:20px;line-height:32px;font-weight:500}
+.lead{font-size:18px;line-height:32px;max-width:56ch}
+.mono{font-family:var(--font-mono)}
+.muted{color:var(--muted)}
+.sec p.intro{margin-top:24px;max-width:56ch}
+
+/* header */
+.hd{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--surface);border-bottom:1px solid var(--hairline)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:80px}
+.logo{height:48px;width:auto;display:block}
+.logo-l,.mark-l{display:var(--logo-l)}
+.logo-d,.mark-d{display:var(--logo-d)}
+.nav{display:flex;align-items:center;gap:32px}
+.nav a{text-decoration:none;padding:8px 0}
+.nav .lnk{font-size:13px;line-height:16px;font-weight:500;letter-spacing:.1em;text-transform:uppercase}
+.nav .lnk:hover{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:3px;text-underline-offset:8px}
+.nav a.btn{padding:14px 24px}
+@media (max-width:1020px){.nav .lnk{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;font:500 15px/16px var(--font-sans);padding:14px 24px;border-radius:0;text-decoration:none;border:1px solid transparent;cursor:pointer;min-height:48px}
+.btn-accent{background:var(--accent);color:var(--on-accent)}
+.btn-accent:hover{filter:brightness(1.07)}
+.btn-ghost{border-color:var(--hero-fg);color:var(--hero-fg);background:transparent}
+.btn-ghost:hover{background:rgba(255,255,255,.10)}
+
+/* hero: photo slot. Put a photo named hero.jpg next to index.html and it fills the hero under a navy overlay. Without it, the navy field, survey grid and contour rings show. */
+.hero{position:relative;display:flex;align-items:center;min-height:clamp(520px,80vh,760px);color:var(--hero-fg);overflow:hidden;background-color:var(--hero-bg);background-image:linear-gradient(90deg,rgba(var(--hero-ov),.9) 0%,rgba(var(--hero-ov),.68) 52%,rgba(var(--hero-ov),.4) 100%),url("hero.jpg");background-size:cover;background-position:center}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:80px 80px;background-position:-1px -1px}
+.hero .wrap{position:relative;width:100%;align-items:center;padding-block:clamp(64px,8vw,96px)}
+.hero .txt{grid-column:1/span 7}
+.hero .art{grid-column:8/span 5}
+.hero h1{font-size:clamp(40px,6vw,64px);line-height:1.08;font-weight:700;letter-spacing:-.02em;text-wrap:balance;margin-bottom:24px}
+.hero .lead{color:var(--hero-muted);margin-bottom:32px}
+.cta{display:flex;flex-wrap:wrap;gap:16px}
+.art{width:100%;max-width:100%;height:auto;display:block}
+.art .ring{fill:none;stroke:var(--hero-fg);stroke-width:1.5}
+.art .lbl{font-family:var(--font-mono);font-size:13px;fill:var(--hero-fg);paint-order:stroke;stroke:rgba(var(--hero-ov),.7);stroke-width:4px;stroke-linejoin:round}
+@media (max-width:860px){
+  .hero{min-height:0;background-image:linear-gradient(rgba(var(--hero-ov),.8),rgba(var(--hero-ov),.8)),url("hero.jpg")}
+  .hero .wrap{row-gap:40px}
+  .hero .txt,.hero .art{grid-column:1/-1}
+  .art{max-height:220px}
+}
+@media (max-width:860px){.s-l,.s-r{grid-column:1/-1}.s-r{margin-top:40px}}
+
+/* stats strip: the four figures every project states */
+.stats{background:var(--raised)}
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:var(--gut);margin-top:48px}
+.sc{background:var(--surface);border:1px solid var(--hairline);padding:32px 24px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.sc::before{content:"";display:block;width:32px;height:4px;background:var(--accent);margin-bottom:16px}
+.sc .big{font-size:clamp(32px,3.6vw,40px);line-height:48px;font-weight:700;letter-spacing:-.02em;color:var(--brand-text)}
+.sc .lab{font-size:13px;line-height:16px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.sc p{font-size:15px;line-height:24px;color:var(--muted)}
+
+/* services */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:var(--gut);margin-top:48px}
+.card{background:var(--raised);border:1px solid var(--hairline);padding:32px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.tag{font-family:var(--font-mono);font-size:12px;line-height:16px;padding:4px 8px;border:1px solid var(--ctrl)}
+.ill{width:100%;height:auto;aspect-ratio:320/150;display:block;background:var(--surface);border:1px solid var(--hairline)}
+.ill .ln{fill:none;stroke:var(--brand-text);stroke-width:1.5}
+.ill .ln2{fill:none;stroke:var(--ctrl);stroke-width:1.5;stroke-dasharray:5 4}
+.ill .fl{fill:var(--tint)}
+.ill .dt{fill:var(--brand-text)}
+.ill .am{fill:none;stroke:var(--accent);stroke-width:2.5}
+.ill .hx{stroke:var(--accent);stroke-width:1.6}
+
+/* deliverables: columns sit on the same grid lines as the rest of the page */
+.tbl{margin-top:48px}
+.tr{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);padding-block:24px;border-top:1px solid var(--hairline)}
+.tr:last-child{border-bottom:1px solid var(--hairline)}
+.tr.th{padding-block:16px;border-top:0}
+.tr.th span{font-family:var(--font-mono);font-size:12px;line-height:16px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.tr>:nth-child(1){grid-column:1/span 3}
+.tr>:nth-child(2){grid-column:4/span 4}
+.tr>:nth-child(3){grid-column:8/span 5}
+.tr strong{font-weight:500;font-size:17px}
+@media (max-width:860px){
+  .tr{grid-template-columns:minmax(0,1fr);row-gap:8px}
+  .tr>:nth-child(n){grid-column:1/-1}
+  .tr.th{display:none}
+  .tr .c[data-l]::before{content:attr(data-l);display:block;font-family:var(--font-mono);font-size:11px;line-height:16px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+}
+
+/* process: circles joined by a dashed flight path */
+.alt{background:var(--raised)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:var(--gut);margin-top:48px}
+.step{position:relative;display:flex;flex-direction:column;gap:8px;min-width:0}
+.step .n{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--accent);color:var(--on-accent);font:500 14px/16px var(--font-mono);margin-bottom:16px;position:relative;z-index:1}
+.step:not(:last-child)::after{content:"";position:absolute;top:20px;left:48px;right:calc(-1 * var(--gut) + 8px);border-top:2px dashed var(--ctrl)}
+@media (max-width:1100px){.step::after{display:none}}
+
+/* environmental */
+.list li{display:flex;align-items:center;gap:16px;padding-block:16px;border-top:1px solid var(--hairline);font-size:17px;line-height:24px}
+.list li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.list li:last-child{border-bottom:1px solid var(--hairline)}
+.fine{margin-top:16px;font-size:14px;line-height:24px;color:var(--muted)}
+.env p.intro{max-width:52ch}
+
+/* about */
+.about p.intro{max-width:56ch}
+.person{background:var(--surface);border:1px solid var(--hairline);padding:32px;display:flex;flex-direction:column;gap:8px}
+.person .nm{font-size:20px;line-height:32px;font-weight:500}
+
+/* contact: WhatsApp form */
+.contact{background:var(--hero-bg);color:var(--hero-fg)}
+.contact .lead{color:var(--hero-muted);margin-top:24px}
+.how{margin-top:32px}
+.how li{display:flex;align-items:center;gap:16px;padding-block:16px;border-top:1px solid var(--hero-muted)}
+.how li:last-child{border-bottom:1px solid var(--hero-muted)}
+.how .n{flex:none;display:grid;place-items:center;width:32px;height:32px;border:1px solid var(--hero-fg);border-radius:50%;font:500 13px/16px var(--font-mono)}
+.contact .alt-cta{margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:16px}
+.contact .fine{color:var(--hero-muted);margin:0}
+.formcard{background:var(--surface);color:var(--ink);padding:32px;display:flex;flex-direction:column;gap:24px}
+.formcard :focus-visible{outline-color:var(--focus)}
+.fld{display:flex;flex-direction:column;gap:8px;min-width:0}
+.fld label{font-size:13px;line-height:16px;font-weight:500;letter-spacing:.04em}
+.fld .req{color:var(--muted);font-weight:400}
+.fld input,.fld select,.fld textarea{font:400 16px/24px var(--font-sans);color:var(--ink);background:var(--surface);border:1px solid var(--ctrl);border-radius:0;padding:12px 16px;min-height:48px;width:100%}
+.fld textarea{min-height:112px;resize:vertical}
+.fld ::placeholder{color:var(--muted);opacity:1}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--gut)}
+@media (max-width:460px){.two{grid-template-columns:minmax(0,1fr)}}
+.formcard .btn{width:100%}
+.status{font-size:14px;line-height:24px;color:var(--muted);min-height:24px}
+.status a{color:var(--brand-text);font-weight:500}
+
+/* footer */
+.ft{border-top:1px solid var(--hairline)}
+.ft .wrap{padding-block:32px;align-items:center;row-gap:16px}
+.ft .l{grid-column:1/span 6;display:flex;align-items:center;gap:16px}
+.ft .r{grid-column:8/span 5}
+.ft .mark{height:40px;width:40px}
+.ft p{font-size:14px;line-height:24px;color:var(--muted)}
+@media (max-width:860px){.ft .l,.ft .r{grid-column:1/-1}}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+<header class="hd"><div class="wrap">
+  <a href="#top" aria-label="Samara Geospatial, home"><svg class="logo logo-l" aria-hidden="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 325 120" role="img" aria-label="Samara Geospatial"><g><circle cx="60" cy="60" r="52" fill="none" stroke="#283A72" stroke-width="2.5"/><path d="M60 2 V12 M60 108 V118 M2 60 H12 M108 60 H118" stroke="#283A72" stroke-width="2.5" stroke-linecap="round"/><path d="M60 60 C56 42 66 24 90 18 C94 40 82 56 60 60 Z" fill="#283A72"/><path d="M60 60 C56 42 66 24 90 18 C94 40 82 56 60 60 Z" fill="#E3A33B" transform="rotate(180 60 60)"/><circle cx="60" cy="60" r="6" fill="#283A72"/></g><path d="M138.67 63.17H144.28Q144.46 65.24 145.91 66.57Q147.36 67.91 149.98 67.91Q152.7 67.91 154.22 66.59Q155.73 65.28 155.73 63.21Q155.73 61.6 154.79 60.59Q153.85 59.58 152.44 59.03Q151.04 58.48 148.56 57.83Q145.43 57 143.48 56.15Q141.52 55.3 140.14 53.51Q138.76 51.71 138.76 48.72Q138.76 45.96 140.14 43.89Q141.52 41.82 144 40.72Q146.49 39.62 149.75 39.62Q154.4 39.62 157.37 41.94Q160.33 44.26 160.66 48.31H154.86Q154.72 46.56 153.2 45.32Q151.69 44.08 149.2 44.08Q146.95 44.08 145.52 45.23Q144.1 46.38 144.1 48.54Q144.1 50.01 144.99 50.95Q145.89 51.9 147.27 52.45Q148.65 53 151.04 53.65Q154.22 54.52 156.22 55.39Q158.22 56.27 159.62 58.09Q161.02 59.9 161.02 62.94Q161.02 65.38 159.71 67.54Q158.4 69.7 155.89 71.01Q153.39 72.32 149.98 72.32Q146.76 72.32 144.19 71.19Q141.61 70.07 140.14 68Q138.67 65.93 138.67 63.17Z M177.05 46.24Q180.04 46.24 182.27 47.41Q184.5 48.59 185.83 50.33V46.65H191.12V72H185.83V68.23Q184.5 70.02 182.2 71.22Q179.9 72.41 176.95 72.41Q173.69 72.41 170.97 70.73Q168.26 69.06 166.67 66.04Q165.09 63.03 165.09 59.21Q165.09 55.39 166.67 52.45Q168.26 49.51 171 47.87Q173.73 46.24 177.05 46.24ZM178.15 50.79Q176.13 50.79 174.38 51.78Q172.63 52.77 171.55 54.68Q170.47 56.59 170.47 59.21Q170.47 61.83 171.55 63.81Q172.63 65.79 174.4 66.83Q176.17 67.86 178.15 67.86Q180.17 67.86 181.92 66.85Q183.67 65.84 184.75 63.88Q185.83 61.93 185.83 59.3Q185.83 56.68 184.75 54.75Q183.67 52.82 181.92 51.81Q180.17 50.79 178.15 50.79Z M238.75 57.05V72H233.55V57.83Q233.55 54.43 231.85 52.61Q230.14 50.79 227.2 50.79Q224.26 50.79 222.53 52.61Q220.81 54.43 220.81 57.83V72H215.61V57.83Q215.61 54.43 213.91 52.61Q212.2 50.79 209.26 50.79Q206.32 50.79 204.59 52.61Q202.87 54.43 202.87 57.83V72H197.62V46.65H202.87V49.55Q204.15 47.99 206.13 47.11Q208.11 46.24 210.36 46.24Q213.4 46.24 215.79 47.53Q218.18 48.82 219.47 51.25Q220.62 48.95 223.06 47.6Q225.5 46.24 228.3 46.24Q231.29 46.24 233.66 47.48Q236.03 48.72 237.39 51.16Q238.75 53.6 238.75 57.05Z M255.23 46.24Q258.22 46.24 260.45 47.41Q262.68 48.59 264.01 50.33V46.65H269.3V72H264.01V68.23Q262.68 70.02 260.38 71.22Q258.08 72.41 255.14 72.41Q251.87 72.41 249.16 70.73Q246.44 69.06 244.86 66.04Q243.27 63.03 243.27 59.21Q243.27 55.39 244.86 52.45Q246.44 49.51 249.18 47.87Q251.92 46.24 255.23 46.24ZM256.33 50.79Q254.31 50.79 252.56 51.78Q250.81 52.77 249.73 54.68Q248.65 56.59 248.65 59.21Q248.65 61.83 249.73 63.81Q250.81 65.79 252.58 66.83Q254.35 67.86 256.33 67.86Q258.36 67.86 260.1 66.85Q261.85 65.84 262.93 63.88Q264.01 61.93 264.01 59.3Q264.01 56.68 262.93 54.75Q261.85 52.82 260.1 51.81Q258.36 50.79 256.33 50.79Z M288.64 46.24V51.67H287.3Q284.22 51.67 282.64 53.23Q281.05 54.8 281.05 58.66V72H275.8V46.65H281.05V50.33Q282.2 48.4 284.11 47.32Q286.02 46.24 288.64 46.24Z M303.28 46.24Q306.27 46.24 308.5 47.41Q310.73 48.59 312.07 50.33V46.65H317.36V72H312.07V68.23Q310.73 70.02 308.43 71.22Q306.13 72.41 303.19 72.41Q299.92 72.41 297.21 70.73Q294.49 69.06 292.91 66.04Q291.32 63.03 291.32 59.21Q291.32 55.39 292.91 52.45Q294.49 49.51 297.23 47.87Q299.97 46.24 303.28 46.24ZM304.38 50.79Q302.36 50.79 300.61 51.78Q298.86 52.77 297.78 54.68Q296.7 56.59 296.7 59.21Q296.7 61.83 297.78 63.81Q298.86 65.79 300.64 66.83Q302.41 67.86 304.38 67.86Q306.41 67.86 308.16 66.85Q309.9 65.84 310.99 63.88Q312.07 61.93 312.07 59.3Q312.07 56.68 310.99 54.75Q309.9 52.82 308.16 51.81Q306.41 50.79 304.38 50.79Z" fill="#283A72"/><path d="M144.67 90.58Q144.26 89.8 143.54 89.4Q142.82 89 141.88 89Q140.84 89 140.03 89.47Q139.22 89.93 138.77 90.78Q138.31 91.64 138.31 92.77Q138.31 93.89 138.77 94.75Q139.22 95.61 140.03 96.08Q140.84 96.55 141.88 96.55Q143.28 96.55 144.14 95.77Q145.01 94.98 145.21 93.65H141.29V92.28H147.04V93.62Q146.88 94.83 146.18 95.85Q145.48 96.88 144.36 97.48Q143.25 98.09 141.88 98.09Q140.41 98.09 139.19 97.41Q137.98 96.72 137.27 95.51Q136.56 94.3 136.56 92.77Q136.56 91.23 137.27 90.02Q137.98 88.81 139.2 88.12Q140.43 87.44 141.88 87.44Q143.54 87.44 144.84 88.26Q146.14 89.08 146.72 90.58Z M161.05 88.95V92.02H164.65V93.41H161.05V96.61H165.1V98H159.34V87.56H165.1V88.95Z M177.26 92.77Q177.26 91.23 177.97 90.02Q178.68 88.81 179.91 88.12Q181.13 87.44 182.58 87.44Q184.05 87.44 185.28 88.12Q186.5 88.81 187.2 90.02Q187.91 91.23 187.91 92.77Q187.91 94.3 187.2 95.52Q186.5 96.74 185.28 97.42Q184.05 98.11 182.58 98.11Q181.13 98.11 179.91 97.42Q178.68 96.74 177.97 95.52Q177.26 94.3 177.26 92.77ZM186.15 92.77Q186.15 91.61 185.7 90.74Q185.24 89.87 184.43 89.41Q183.62 88.94 182.58 88.94Q181.55 88.94 180.74 89.41Q179.93 89.87 179.47 90.74Q179.01 91.61 179.01 92.77Q179.01 93.92 179.47 94.8Q179.93 95.67 180.74 96.15Q181.55 96.62 182.58 96.62Q183.62 96.62 184.43 96.15Q185.24 95.67 185.7 94.8Q186.15 93.92 186.15 92.77Z M199.96 95.12H201.79Q201.85 95.8 202.32 96.23Q202.79 96.67 203.65 96.67Q204.53 96.67 205.03 96.24Q205.52 95.81 205.52 95.14Q205.52 94.61 205.21 94.28Q204.91 93.95 204.45 93.77Q203.99 93.59 203.18 93.38Q202.16 93.11 201.52 92.83Q200.89 92.56 200.44 91.97Q199.99 91.39 199.99 90.41Q199.99 89.51 200.44 88.84Q200.89 88.16 201.7 87.8Q202.51 87.44 203.57 87.44Q205.09 87.44 206.05 88.2Q207.02 88.95 207.13 90.28H205.24Q205.19 89.7 204.7 89.3Q204.2 88.89 203.39 88.89Q202.66 88.89 202.19 89.27Q201.73 89.64 201.73 90.35Q201.73 90.83 202.02 91.14Q202.31 91.44 202.76 91.62Q203.21 91.81 203.99 92.02Q205.03 92.3 205.68 92.59Q206.33 92.87 206.79 93.46Q207.25 94.06 207.25 95.05Q207.25 95.84 206.82 96.55Q206.39 97.25 205.57 97.68Q204.76 98.11 203.65 98.11Q202.6 98.11 201.76 97.74Q200.92 97.37 200.44 96.69Q199.96 96.02 199.96 95.12Z M223.5 93.77H221.61V98H219.9V87.58H223.5Q224.7 87.58 225.53 87.99Q226.36 88.4 226.77 89.11Q227.19 89.81 227.19 90.68Q227.19 91.47 226.81 92.18Q226.44 92.89 225.61 93.33Q224.79 93.77 223.5 93.77ZM225.43 90.68Q225.43 88.97 223.5 88.97H221.61V92.38H223.5Q224.47 92.38 224.95 91.93Q225.43 91.49 225.43 90.68Z M245.73 95.87H241.36L240.61 98H238.83L242.56 87.56H244.54L248.28 98H246.48ZM245.25 94.47 243.56 89.63 241.84 94.47Z M267.26 87.58V88.97H264.48V98H262.77V88.97H259.98V87.58Z M281.32 87.58V98H279.61V87.58Z M300.48 95.87H296.11L295.36 98H293.58L297.31 87.56H299.29L303.03 98H301.23ZM300 94.47 298.3 89.63 296.59 94.47Z M316.98 96.62H320.51V98H315.27V87.58H316.98Z" fill="#586482"/></svg><svg class="logo logo-d" aria-hidden="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 325 120" role="img" aria-label="Samara Geospatial"><g><circle cx="60" cy="60" r="52" fill="none" stroke="#FFFFFF" stroke-width="2.5"/><path d="M60 2 V12 M60 108 V118 M2 60 H12 M108 60 H118" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/><path d="M60 60 C56 42 66 24 90 18 C94 40 82 56 60 60 Z" fill="#FFFFFF"/><path d="M60 60 C56 42 66 24 90 18 C94 40 82 56 60 60 Z" fill="#E3A33B" transform="rotate(180 60 60)"/><circle cx="60" cy="60" r="6" fill="#FFFFFF"/></g><path d="M138.67 63.17H144.28Q144.46 65.24 145.91 66.57Q147.36 67.91 149.98 67.91Q152.7 67.91 154.22 66.59Q155.73 65.28 155.73 63.21Q155.73 61.6 154.79 60.59Q153.85 59.58 152.44 59.03Q151.04 58.48 148.56 57.83Q145.43 57 143.48 56.15Q141.52 55.3 140.14 53.51Q138.76 51.71 138.76 48.72Q138.76 45.96 140.14 43.89Q141.52 41.82 144 40.72Q146.49 39.62 149.75 39.62Q154.4 39.62 157.37 41.94Q160.33 44.26 160.66 48.31H154.86Q154.72 46.56 153.2 45.32Q151.69 44.08 149.2 44.08Q146.95 44.08 145.52 45.23Q144.1 46.38 144.1 48.54Q144.1 50.01 144.99 50.95Q145.89 51.9 147.27 52.45Q148.65 53 151.04 53.65Q154.22 54.52 156.22 55.39Q158.22 56.27 159.62 58.09Q161.02 59.9 161.02 62.94Q161.02 65.38 159.71 67.54Q158.4 69.7 155.89 71.01Q153.39 72.32 149.98 72.32Q146.76 72.32 144.19 71.19Q141.61 70.07 140.14 68Q138.67 65.93 138.67 63.17Z M177.05 46.24Q180.04 46.24 182.27 47.41Q184.5 48.59 185.83 50.33V46.65H191.12V72H185.83V68.23Q184.5 70.02 182.2 71.22Q179.9 72.41 176.95 72.41Q173.69 72.41 170.97 70.73Q168.26 69.06 166.67 66.04Q165.09 63.03 165.09 59.21Q165.09 55.39 166.67 52.45Q168.26 49.51 171 47.87Q173.73 46.24 177.05 46.24ZM178.15 50.79Q176.13 50.79 174.38 51.78Q172.63 52.77 171.55 54.68Q170.47 56.59 170.47 59.21Q170.47 61.83 171.55 63.81Q172.63 65.79 174.4 66.83Q176.17 67.86 178.15 67.86Q180.17 67.86 181.92 66.85Q183.67 65.84 184.75 63.88Q185.83 61.93 185.83 59.3Q185.83 56.68 184.75 54.75Q183.67 52.82 181.92 51.81Q180.17 50.79 178.15 50.79Z M238.75 57.05V72H233.55V57.83Q233.55 54.43 231.85 52.61Q230.14 50.79 227.2 50.79Q224.26 50.79 222.53 52.61Q220.81 54.43 220.81 57.83V72H215.61V57.83Q215.61 54.43 213.91 52.61Q212.2 50.79 209.26 50.79Q206.32 50.79 204.59 52.61Q202.87 54.43 202.87 57.83V72H197.62V46.65H202.87V49.55Q204.15 47.99 206.13 47.11Q208.11 46.24 210.36 46.24Q213.4 46.24 215.79 47.53Q218.18 48.82 219.47 51.25Q220.62 48.95 223.06 47.6Q225.5 46.24 228.3 46.24Q231.29 46.24 233.66 47.48Q236.03 48.72 237.39 51.16Q238.75 53.6 238.75 57.05Z M255.23 46.24Q258.22 46.24 260.45 47.41Q262.68 48.59 264.01 50.33V46.65H269.3V72H264.01V68.23Q262.68 70.02 260.38 71.22Q258.08 72.41 255.14 72.41Q251.87 72.41 249.16 70.73Q246.44 69.06 244.86 66.04Q243.27 63.03 243.27 59.21Q243.27 55.39 244.86 52.45Q246.44 49.51 249.18 47.87Q251.92 46.24 255.23 46.24ZM256.33 50.79Q254.31 50.79 252.56 51.78Q250.81 52.77 249.73 54.68Q248.65 56.59 248.65 59.21Q248.65 61.83 249.73 63.81Q250.81 65.79 252.58 66.83Q254.35 67.86 256.33 67.86Q258.36 67.86 260.1 66.85Q261.85 65.84 262.93 63.88Q264.01 61.93 264.01 59.3Q264.01 56.68 262.93 54.75Q261.85 52.82 260.1 51.81Q258.36 50.79 256.33 50.79Z M288.64 46.24V51.67H287.3Q284.22 51.67 282.64 53.23Q281.05 54.8 281.05 58.66V72H275.8V46.65H281.05V50.33Q282.2 48.4 284.11 47.32Q286.02 46.24 288.64 46.24Z M303.28 46.24Q306.27 46.24 308.5 47.41Q310.73 48.59 312.07 50.33V46.65H317.36V72H312.07V68.23Q310.73 70.02 308.43 71.22Q306.13 72.41 303.19 72.41Q299.92 72.41 297.21 70.73Q294.49 69.06 292.91 66.04Q291.32 63.03 291.32 59.21Q291.32 55.39 292.91 52.45Q294.49 49.51 297.23 47.87Q299.97 46.24 303.28 46.24ZM304.38 50.79Q302.36 50.79 300.61 51.78Q298.86 52.77 297.78 54.68Q296.7 56.59 296.7 59.21Q296.7 61.83 297.78 63.81Q298.86 65.79 300.64 66.83Q302.41 67.86 304.38 67.86Q306.41 67.86 308.16 66.85Q309.9 65.84 310.99 63.88Q312.07 61.93 312.07 59.3Q312.07 56.68 310.99 54.75Q309.9 52.82 308.16 51.81Q306.41 50.79 304.38 50.79Z" fill="#FFFFFF"/><path d="M144.67 90.58Q144.26 89.8 143.54 89.4Q142.82 89 141.88 89Q140.84 89 140.03 89.47Q139.22 89.93 138.77 90.78Q138.31 91.64 138.31 92.77Q138.31 93.89 138.77 94.75Q139.22 95.61 140.03 96.08Q140.84 96.55 141.88 96.55Q143.28 96.55 144.14 95.77Q145.01 94.98 145.21 93.65H141.29V92.28H147.04V93.62Q146.88 94.83 146.18 95.85Q145.48 96.88 144.36 97.48Q143.25 98.09 141.88 98.09Q140.41 98.09 139.19 97.41Q137.98 96.72 137.27 95.51Q136.56 94.3 136.56 92.77Q136.56 91.23 137.27 90.02Q137.98 88.81 139.2 88.12Q140.43 87.44 141.88 87.44Q143.54 87.44 144.84 88.26Q146.14 89.08 146.72 90.58Z M161.05 88.95V92.02H164.65V93.41H161.05V96.61H165.1V98H159.34V87.56H165.1V88.95Z M177.26 92.77Q177.26 91.23 177.97 90.02Q178.68 88.81 179.91 88.12Q181.13 87.44 182.58 87.44Q184.05 87.44 185.28 88.12Q186.5 88.81 187.2 90.02Q187.91 91.23 187.91 92.77Q187.91 94.3 187.2 95.52Q186.5 96.74 185.28 97.42Q184.05 98.11 182.58 98.11Q181.13 98.11 179.91 97.42Q178.68 96.74 177.97 95.52Q177.26 94.3 177.26 92.77ZM186.15 92.77Q186.15 91.61 185.7 90.74Q185.24 89.87 184.43 89.41Q183.62 88.94 182.58 88.94Q181.55 88.94 180.74 89.41Q179.93 89.87 179.47 90.74Q179.01 91.61 179.01 92.77Q179.01 93.92 179.47 94.8Q179.93 95.67 180.74 96.15Q181.55 96.62 182.58 96.62Q183.62 96.62 184.43 96.15Q185.24 95.67 185.7 94.8Q186.15 93.92 186.15 92.77Z M199.96 95.12H201.79Q201.85 95.8 202.32 96.23Q202.79 96.67 203.65 96.67Q204.53 96.67 205.03 96.24Q205.52 95.81 205.52 95.14Q205.52 94.61 205.21 94.28Q204.91 93.95 204.45 93.77Q203.99 93.59 203.18 93.38Q202.16 93.11 201.52 92.83Q200.89 92.56 200.44 91.97Q199.99 91.39 199.99 90.41Q199.99 89.51 200.44 88.84Q200.89 88.16 201.7 87.8Q202.51 87.44 203.57 87.44Q205.09 87.44 206.05 88.2Q207.02 88.95 207.13 90.28H205.24Q205.19 89.7 204.7 89.3Q204.2 88.89 203.39 88.89Q202.66 88.89 202.19 89.27Q201.73 89.64 201.73 90.35Q201.73 90.83 202.02 91.14Q202.31 91.44 202.76 91.62Q203.21 91.81 203.99 92.02Q205.03 92.3 205.68 92.59Q206.33 92.87 206.79 93.46Q207.25 94.06 207.25 95.05Q207.25 95.84 206.82 96.55Q206.39 97.25 205.57 97.68Q204.76 98.11 203.65 98.11Q202.6 98.11 201.76 97.74Q200.92 97.37 200.44 96.69Q199.96 96.02 199.96 95.12Z M223.5 93.77H221.61V98H219.9V87.58H223.5Q224.7 87.58 225.53 87.99Q226.36 88.4 226.77 89.11Q227.19 89.81 227.19 90.68Q227.19 91.47 226.81 92.18Q226.44 92.89 225.61 93.33Q224.79 93.77 223.5 93.77ZM225.43 90.68Q225.43 88.97 223.5 88.97H221.61V92.38H223.5Q224.47 92.38 224.95 91.93Q225.43 91.49 225.43 90.68Z M245.73 95.87H241.36L240.61 98H238.83L242.56 87.56H244.54L248.28 98H246.48ZM245.25 94.47 243.56 89.63 241.84 94.47Z M267.26 87.58V88.97H264.48V98H262.77V88.97H259.98V87.58Z M281.32 87.58V98H279.61V87.58Z M300.48 95.87H296.11L295.36 98H293.58L297.31 87.56H299.29L303.03 98H301.23ZM300 94.47 298.3 89.63 296.59 94.47Z M316.98 96.62H320.51V98H315.27V87.58H316.98Z" fill="#C5CDE6"/></svg></a>
+  <nav class="nav" aria-label="Main">
+    <a class="lnk" href="#large-scale">Large-scale</a><a class="lnk" href="#services">What we do</a><a class="lnk" href="#deliverables">Deliverables</a><a class="lnk" href="#process">Process</a><a class="lnk" href="#about">About</a>
+    <a class="btn btn-accent" href="#contact">Request a survey</a>
+  </nav>
+</div></header>
+
+<main id="main">
+<section class="hero on-hero" id="top"><div class="wrap g12">
+  <div class="txt">
+    <p class="eyebrow">Large-scale drone mapping</p>
+    <h1>Where drone data becomes decisions.</h1>
+    <p class="lead">Large-scale mapping with drone photogrammetry and lidar: orthomosaics, elevation models and classified point clouds, and the environmental monitoring built on them.</p>
+    <div class="cta"><a class="btn btn-accent" href="#contact">Request a survey</a><a class="btn btn-ghost" href="#deliverables">See what we deliver</a></div>
+  </div>
+  <svg class="art" viewBox="0 0 480 380" role="img" aria-label="Contour rings around a waypoint at 13.0827 degrees north, 80.2707 degrees east">
+    <ellipse class="ring" cx="240" cy="190" rx="46" ry="28" transform="rotate(-16 240 190)" opacity="1"/><ellipse class="ring" cx="243" cy="190" rx="92" ry="58" transform="rotate(-16 240 190)" opacity="0.85"/><ellipse class="ring" cx="246" cy="190" rx="140" ry="90" transform="rotate(-16 240 190)" opacity="0.7"/><ellipse class="ring" cx="249" cy="190" rx="190" ry="122" transform="rotate(-16 240 190)" opacity="0.5"/><ellipse class="ring" cx="252" cy="190" rx="230" ry="148" transform="rotate(-16 240 190)" opacity="0.35"/>
+    <circle cx="318" cy="150" r="9" fill="#E3A33B"/>
+    <path d="M326 144 L352 112 H464" fill="none" stroke="var(--hero-muted)" stroke-width="1"/>
+    <text class="lbl" x="288" y="100">13.0827° N, 80.2707° E</text>
+    <text class="lbl" x="352" y="132">EPSG:32644</text>
+  </svg>
+</div></section>
+
+<section class="sec stats" id="large-scale"><div class="wrap">
+  <p class="eyebrow">Large-scale mapping</p>
+  <h2>Projects measured in square kilometres.</h2>
+  <p class="intro">Large areas need flight blocks planned to the terrain, consistent ground control and processing that holds up at scale. Every job is quoted with four figures, so you know exactly what you are buying.</p>
+  <div class="sg">
+    <div class="sc"><span class="big">km²</span><span class="lab">Area</span><p>From the site boundary you send.</p></div>
+    <div class="sc"><span class="big">cm/px</span><span class="lab">Ground resolution</span><p>Set by what you need to measure.</p></div>
+    <div class="sc"><span class="big">EPSG</span><span class="lab">Coordinate system</span><p>The system you work in, such as EPSG:32644.</p></div>
+    <div class="sc"><span class="big">± cm</span><span class="lab">Accuracy</span><p>Checked against independent checkpoints and written up in a report.</p></div>
+  </div>
+</div></section>
+
+<section class="sec" id="services"><div class="wrap">
+  <p class="eyebrow">What we do</p>
+  <h2>Two lines of work, one data pipeline.</h2>
+  <div class="cards">
+    <article class="card"><svg class="ill" viewBox="0 0 320 150" aria-hidden="true"><defs><clipPath id="c1"><polygon points="40,28 246,20 292,70 270,126 92,134 26,90"/></clipPath></defs><polygon class="fl" points="40,28 246,20 292,70 270,126 92,134 26,90"/><g clip-path="url(#c1)"><path class="ln" d="M0 34 H320" opacity=".75"/><path class="ln" d="M0 48 H320" opacity=".75"/><path class="ln" d="M0 62 H320" opacity=".75"/><path class="ln" d="M0 76 H320" opacity=".75"/><path class="ln" d="M0 90 H320" opacity=".75"/><path class="ln" d="M0 104 H320" opacity=".75"/><path class="ln" d="M0 118 H320" opacity=".75"/><path class="ln" d="M0 132 H320" opacity=".75"/></g><polygon class="ln" points="40,28 246,20 292,70 270,126 92,134 26,90"/><circle cx="50" cy="34" r="5.5" fill="var(--accent)"/></svg><h3>Large-scale mapping</h3><p>Drone photogrammetry and lidar capture over large areas, measured in square kilometres. Flights are planned to the terrain, tied to ground control and checked against independent checkpoints.</p><div class="tags"><span class="tag">km²</span><span class="tag">photogrammetry</span><span class="tag">lidar</span></div></article>
+    <article class="card"><svg class="ill" viewBox="0 0 320 150" aria-hidden="true"><circle class="dt" cx="17.3" cy="37.8" r="1.8"/><circle class="dt" cx="25.6" cy="39.2" r="1.8"/><circle class="dt" cx="32.1" cy="42.5" r="1.8"/><circle class="dt" cx="37.2" cy="44.4" r="1.8"/><circle class="dt" cx="44.1" cy="44.5" r="1.8"/><circle class="dt" cx="51.3" cy="42.5" r="1.8"/><circle class="dt" cx="59.7" cy="46.4" r="1.8"/><circle class="dt" cx="65.5" cy="41.8" r="1.8"/><circle class="dt" cx="74.5" cy="44.7" r="1.8"/><circle class="dt" cx="81.3" cy="39.6" r="1.8"/><circle class="dt" cx="89.9" cy="35.3" r="1.8"/><circle class="dt" cx="96.4" cy="34.5" r="1.8"/><circle class="dt" cx="100.6" cy="31.0" r="1.8"/><circle class="dt" cx="108.2" cy="32.8" r="1.8"/><circle class="dt" cx="114.7" cy="29.2" r="1.8"/><circle class="dt" cx="123.6" cy="26.0" r="1.8"/><circle class="dt" cx="130.2" cy="22.5" r="1.8"/><circle class="dt" cx="135.2" cy="22.2" r="1.8"/><circle class="dt" cx="18.7" cy="65.7" r="1.8"/><circle class="dt" cx="24.3" cy="67.3" r="1.8"/><circle class="dt" cx="31.8" cy="65.8" r="1.8"/><circle class="dt" cx="40.2" cy="67.8" r="1.8"/><circle class="dt" cx="45.0" cy="66.2" r="1.8"/><circle class="dt" cx="53.1" cy="66.7" r="1.8"/><circle class="dt" cx="60.9" cy="61.5" r="1.8"/><circle class="dt" cx="68.9" cy="58.4" r="1.8"/><circle class="dt" cx="73.7" cy="59.9" r="1.8"/><circle class="dt" cx="79.6" cy="55.9" r="1.8"/><circle class="dt" cx="86.2" cy="54.6" r="1.8"/><circle class="dt" cx="96.1" cy="51.7" r="1.8"/><circle class="dt" cx="103.5" cy="48.1" r="1.8"/><circle class="dt" cx="109.8" cy="48.1" r="1.8"/><circle class="dt" cx="116.3" cy="45.9" r="1.8"/><circle class="dt" cx="124.4" cy="48.0" r="1.8"/><circle class="dt" cx="129.9" cy="46.0" r="1.8"/><circle class="dt" cx="135.2" cy="46.4" r="1.8"/><circle class="dt" cx="18.6" cy="91.8" r="1.8"/><circle class="dt" cx="26.3" cy="86.8" r="1.8"/><circle class="dt" cx="31.5" cy="87.9" r="1.8"/><circle class="dt" cx="37.1" cy="85.0" r="1.8"/><circle class="dt" cx="44.7" cy="80.9" r="1.8"/><circle class="dt" cx="51.2" cy="82.6" r="1.8"/><circle class="dt" cx="58.5" cy="77.1" r="1.8"/><circle class="dt" cx="66.6" cy="78.5" r="1.8"/><circle class="dt" cx="72.3" cy="73.6" r="1.8"/><circle class="dt" cx="81.2" cy="74.1" r="1.8"/><circle class="dt" cx="89.3" cy="72.1" r="1.8"/><circle class="dt" cx="94.1" cy="68.0" r="1.8"/><circle class="dt" cx="101.4" cy="69.8" r="1.8"/><circle class="dt" cx="110.8" cy="64.9" r="1.8"/><circle class="dt" cx="114.7" cy="65.5" r="1.8"/><circle class="dt" cx="121.9" cy="67.6" r="1.8"/><circle class="dt" cx="130.4" cy="67.3" r="1.8"/><circle class="dt" cx="135.0" cy="69.8" r="1.8"/><circle class="dt" cx="17.5" cy="108.1" r="1.8"/><circle class="dt" cx="26.8" cy="107.0" r="1.8"/><circle class="dt" cx="32.1" cy="104.3" r="1.8"/><circle class="dt" cx="39.7" cy="98.6" r="1.8"/><circle class="dt" cx="47.6" cy="100.6" r="1.8"/><circle class="dt" cx="54.5" cy="98.3" r="1.8"/><circle class="dt" cx="59.6" cy="93.7" r="1.8"/><circle class="dt" cx="65.4" cy="93.2" r="1.8"/><circle class="dt" cx="72.2" cy="88.3" r="1.8"/><circle class="dt" cx="79.8" cy="87.7" r="1.8"/><circle class="dt" cx="87.4" cy="86.4" r="1.8"/><circle class="dt" cx="93.0" cy="86.9" r="1.8"/><circle class="dt" cx="100.4" cy="88.6" r="1.8"/><circle class="dt" cx="107.1" cy="92.6" r="1.8"/><circle class="dt" cx="116.5" cy="89.7" r="1.8"/><circle class="dt" cx="122.0" cy="92.7" r="1.8"/><circle class="dt" cx="129.5" cy="93.4" r="1.8"/><circle class="dt" cx="138.4" cy="101.0" r="1.8"/><circle class="dt" cx="17.9" cy="123.8" r="1.8"/><circle class="dt" cx="23.3" cy="119.1" r="1.8"/><circle class="dt" cx="31.4" cy="117.7" r="1.8"/><circle class="dt" cx="40.3" cy="114.9" r="1.8"/><circle class="dt" cx="44.1" cy="117.6" r="1.8"/><circle class="dt" cx="53.1" cy="111.1" r="1.8"/><circle class="dt" cx="60.2" cy="109.2" r="1.8"/><circle class="dt" cx="67.1" cy="114.1" r="1.8"/><circle class="dt" cx="75.5" cy="112.2" r="1.8"/><circle class="dt" cx="80.0" cy="110.5" r="1.8"/><circle class="dt" cx="86.7" cy="113.7" r="1.8"/><circle class="dt" cx="95.1" cy="115.1" r="1.8"/><circle class="dt" cx="101.3" cy="113.4" r="1.8"/><circle class="dt" cx="110.2" cy="120.0" r="1.8"/><circle class="dt" cx="117.4" cy="121.2" r="1.8"/><circle class="dt" cx="124.3" cy="123.2" r="1.8"/><circle class="dt" cx="128.9" cy="124.3" r="1.8"/><circle class="dt" cx="136.4" cy="123.6" r="1.8"/><path class="am" d="M148 76 H170 M163 69 L171 76 L163 83"/><path class="ln" d="M182 28.1 L186 29.3 L190 30.6 L194 31.9 L198 33.3 L202 34.7 L206 36.0 L210 37.4 L214 38.6 L218 39.9 L222 41.0 L226 42.0 L230 42.9 L234 43.6 L238 44.2 L242 44.6 L246 44.9 L250 45.0 L254 44.9 L258 44.7 L262 44.2 L266 43.7 L270 42.9 L274 42.1 L278 41.0 L282 39.9 L286 38.7 L290 37.4 L294 36.1 L298 34.7 L302 33.4"/><path class="ln" d="M182 56.3 L186 57.7 L190 59.1 L194 60.4 L198 61.6 L202 62.7 L206 63.8 L210 64.7 L214 65.5 L218 66.1 L222 66.6 L226 66.9 L230 67.0 L234 67.0 L238 66.7 L242 66.4 L246 65.8 L250 65.1 L254 64.3 L258 63.3 L262 62.2 L266 61.0 L270 59.7 L274 58.4 L278 57.0 L282 55.7 L286 54.3 L290 52.9 L294 51.6 L298 50.4 L302 49.3"/><path class="ln" d="M182 84.5 L186 85.6 L190 86.5 L194 87.3 L198 88.0 L202 88.5 L206 88.8 L210 89.0 L214 89.0 L218 88.8 L222 88.5 L226 87.9 L230 87.3 L234 86.5 L238 85.5 L242 84.4 L246 83.3 L250 82.0 L254 80.7 L258 79.4 L262 78.0 L266 76.6 L270 75.2 L274 73.9 L278 72.7 L282 71.5 L286 70.5 L290 69.5 L294 68.7 L298 68.0 L302 67.5"/><path class="ln" d="M182 110.4 L186 110.8 L190 111.0 L194 111.0 L198 110.9 L202 110.5 L206 110.1 L210 109.4 L214 108.7 L218 107.7 L222 106.7 L226 105.5 L230 104.3 L234 103.0 L238 101.7 L242 100.3 L246 98.9 L250 97.5 L254 96.2 L258 95.0 L262 93.8 L266 92.7 L270 91.7 L274 90.9 L278 90.2 L282 89.6 L286 89.3 L290 89.0 L294 89.0 L298 89.1 L302 89.5"/><path class="ln" d="M182 132.6 L186 132.2 L190 131.6 L194 130.8 L198 129.9 L202 128.9 L206 127.8 L210 126.6 L214 125.3 L218 124.0 L222 122.6 L226 121.2 L230 119.8 L234 118.5 L238 117.2 L242 116.0 L246 114.9 L250 113.9 L254 113.0 L258 112.3 L262 111.7 L266 111.3 L270 111.1 L274 111.0 L278 111.1 L282 111.4 L286 111.8 L290 112.4 L294 113.2 L298 114.0 L302 115.1"/></svg><h3>Data processing</h3><p>Already have drone or lidar data? We turn it into orthomosaics, elevation models and classified point clouds, including datasets that normal workflows struggle with.</p><div class="tags"><span class="tag">orthomosaic</span><span class="tag">DEM</span><span class="tag">point cloud</span></div></article>
+    <article class="card"><svg class="ill" viewBox="0 0 320 150" aria-hidden="true"><defs><pattern id="h1" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line class="hx" x1="0" y1="0" x2="0" y2="6"/></pattern></defs><polygon class="fl" points="0,78.0 4,80.1 8,82.1 12,84.0 16,85.7 20,87.1 24,88.3 28,89.2 32,89.7 36,90.0 40,90.0 44,89.7 48,89.2 52,88.6 56,87.8 60,87.0 64,86.2 68,85.5 72,84.8 76,84.3 80,83.9 84,83.6 88,83.4 92,83.3 96,83.3 100,83.3 104,83.3 108,83.3 112,83.1 116,82.8 120,82.3 124,81.6 128,80.6 132,79.5 136,78.1 140,76.6 144,74.9 148,73.1 152,71.3 156,69.6 160,67.9 164,66.4 168,65.1 172,64.1 176,63.4 180,63.1 184,63.1 188,63.4 192,64.1 196,65.1 200,66.3 204,67.7 208,69.2 212,70.9 216,72.5 220,74.1 224,75.6 228,76.9 232,78.1 236,79.1 240,79.8 244,80.4 248,80.8 252,81.1 256,81.2 260,81.3 264,81.4 268,81.5 272,81.7 276,82.0 280,82.5 284,83.0 288,83.7 292,84.6 296,85.5 300,86.5 304,87.6 308,88.6 312,89.5 316,90.2 320,90.8 320,150 0,150"/><polygon fill="url(#h1)" points="0,54.0 4,56.1 8,58.1 12,60.0 16,61.7 20,63.1 24,64.3 28,65.2 32,65.7 36,66.0 40,66.0 44,65.7 48,65.2 52,64.6 56,63.8 60,63.0 64,62.2 68,61.5 72,60.8 76,60.3 80,59.9 84,59.6 88,59.4 92,59.3 96,59.3 100,59.3 104,59.3 108,59.3 112,59.1 116,58.8 120,58.3 124,57.6 128,56.6 132,55.5 136,54.1 140,52.6 144,50.9 148,49.1 152,47.3 156,45.6 160,43.9 164,42.4 168,41.1 172,40.1 176,39.4 180,39.1 184,39.1 188,39.4 192,40.1 196,41.1 200,42.3 204,43.7 208,45.2 212,46.9 216,48.5 220,50.1 224,51.6 228,52.9 232,54.1 236,55.1 240,55.8 244,56.4 248,56.8 252,57.1 256,57.2 260,57.3 264,57.4 268,57.5 272,57.7 276,58.0 280,58.5 284,59.0 288,59.7 292,60.6 296,61.5 300,62.5 304,63.6 308,64.6 312,65.5 316,66.2 320,66.8 320,90.8 316,90.2 312,89.5 308,88.6 304,87.6 300,86.5 296,85.5 292,84.6 288,83.7 284,83.0 280,82.5 276,82.0 272,81.7 268,81.5 264,81.4 260,81.3 256,81.2 252,81.1 248,80.8 244,80.4 240,79.8 236,79.1 232,78.1 228,76.9 224,75.6 220,74.1 216,72.5 212,70.9 208,69.2 204,67.7 200,66.3 196,65.1 192,64.1 188,63.4 184,63.1 180,63.1 176,63.4 172,64.1 168,65.1 164,66.4 160,67.9 156,69.6 152,71.3 148,73.1 144,74.9 140,76.6 136,78.1 132,79.5 128,80.6 124,81.6 120,82.3 116,82.8 112,83.1 108,83.3 104,83.3 100,83.3 96,83.3 92,83.3 88,83.4 84,83.6 80,83.9 76,84.3 72,84.8 68,85.5 64,86.2 60,87.0 56,87.8 52,88.6 48,89.2 44,89.7 40,90.0 36,90.0 32,89.7 28,89.2 24,88.3 20,87.1 16,85.7 12,84.0 8,82.1 4,80.1 0,78.0"/><polyline class="ln2" points="0,54.0 4,56.1 8,58.1 12,60.0 16,61.7 20,63.1 24,64.3 28,65.2 32,65.7 36,66.0 40,66.0 44,65.7 48,65.2 52,64.6 56,63.8 60,63.0 64,62.2 68,61.5 72,60.8 76,60.3 80,59.9 84,59.6 88,59.4 92,59.3 96,59.3 100,59.3 104,59.3 108,59.3 112,59.1 116,58.8 120,58.3 124,57.6 128,56.6 132,55.5 136,54.1 140,52.6 144,50.9 148,49.1 152,47.3 156,45.6 160,43.9 164,42.4 168,41.1 172,40.1 176,39.4 180,39.1 184,39.1 188,39.4 192,40.1 196,41.1 200,42.3 204,43.7 208,45.2 212,46.9 216,48.5 220,50.1 224,51.6 228,52.9 232,54.1 236,55.1 240,55.8 244,56.4 248,56.8 252,57.1 256,57.2 260,57.3 264,57.4 268,57.5 272,57.7 276,58.0 280,58.5 284,59.0 288,59.7 292,60.6 296,61.5 300,62.5 304,63.6 308,64.6 312,65.5 316,66.2 320,66.8"/><polyline class="ln" points="0,78.0 4,80.1 8,82.1 12,84.0 16,85.7 20,87.1 24,88.3 28,89.2 32,89.7 36,90.0 40,90.0 44,89.7 48,89.2 52,88.6 56,87.8 60,87.0 64,86.2 68,85.5 72,84.8 76,84.3 80,83.9 84,83.6 88,83.4 92,83.3 96,83.3 100,83.3 104,83.3 108,83.3 112,83.1 116,82.8 120,82.3 124,81.6 128,80.6 132,79.5 136,78.1 140,76.6 144,74.9 148,73.1 152,71.3 156,69.6 160,67.9 164,66.4 168,65.1 172,64.1 176,63.4 180,63.1 184,63.1 188,63.4 192,64.1 196,65.1 200,66.3 204,67.7 208,69.2 212,70.9 216,72.5 220,74.1 224,75.6 228,76.9 232,78.1 236,79.1 240,79.8 244,80.4 248,80.8 252,81.1 256,81.2 260,81.3 264,81.4 268,81.5 272,81.7 276,82.0 280,82.5 284,83.0 288,83.7 292,84.6 296,85.5 300,86.5 304,87.6 308,88.6 312,89.5 316,90.2 320,90.8"/></svg><h3>Environmental solutions</h3><p>The same data used to measure and monitor land, water and vegetation: baselines, change detection, and flood and drainage mapping.</p><div class="tags"><span class="tag">baseline</span><span class="tag">change detection</span><span class="tag">flood</span></div></article>
+  </div>
+</div></section>
+
+<section class="sec alt" id="deliverables"><div class="wrap">
+  <p class="eyebrow">Deliverables</p>
+  <h2>Name the output. We deliver exactly that.</h2>
+  <p class="intro">Every delivery comes with its coordinate system and an accuracy check.</p>
+  <div class="tbl" role="table" aria-label="Deliverables">
+    <div class="tr th" role="row"><span role="columnheader">Deliverable</span><span role="columnheader">What it is</span><span role="columnheader">Used for</span></div>
+    <div class="tr" role="row"><div class="c" role="cell"><strong>Orthomosaic</strong></div><div class="c" data-l="What it is" role="cell">A georeferenced, distortion-corrected image of the whole site.</div><div class="c" data-l="Used for" role="cell">Base maps, measurement, planning.</div></div>
+    <div class="tr" role="row"><div class="c" role="cell"><strong>DEM, DSM and DTM</strong></div><div class="c" data-l="What it is" role="cell">Elevation models of the surface, and of the bare ground without trees and buildings.</div><div class="c" data-l="Used for" role="cell">Drainage, slope, earthwork, flood analysis.</div></div>
+    <div class="tr" role="row"><div class="c" role="cell"><strong>Classified point cloud</strong></div><div class="c" data-l="What it is" role="cell">3D points sorted into ground, vegetation, buildings and other classes.</div><div class="c" data-l="Used for" role="cell">Terrain extraction, vegetation height, as-built checks.</div></div>
+    <div class="tr" role="row"><div class="c" role="cell"><strong>Contour map</strong></div><div class="c" data-l="What it is" role="cell">Lines of equal elevation drawn from the elevation model.</div><div class="c" data-l="Used for" role="cell">Design, grading, planning.</div></div>
+    <div class="tr" role="row"><div class="c" role="cell"><strong>Volume report</strong></div><div class="c" data-l="What it is" role="cell">Stockpile, cut and fill quantities from the surface model.</div><div class="c" data-l="Used for" role="cell">Billing, progress tracking.</div></div>
+  </div>
+</div></section>
+
+<section class="sec" id="process"><div class="wrap">
+  <p class="eyebrow">From flight plan to finished map</p>
+  <h2>How a project runs.</h2>
+  <ol class="steps">
+    <li class="step"><span class="n">01</span><h3>Plan</h3><p>We agree the area, ground resolution, deliverables and deadline, then plan flight blocks and ground control.</p></li>
+    <li class="step"><span class="n">02</span><h3>Capture</h3><p>Drone flights with photogrammetry or lidar sensors, tied to ground control and checkpoints.</p></li>
+    <li class="step"><span class="n">03</span><h3>Process</h3><p>Alignment, classification and modelling into orthomosaics, elevation models and point clouds.</p></li>
+    <li class="step"><span class="n">04</span><h3>Deliver</h3><p>Files in the agreed coordinate system, with an accuracy report you can check.</p></li>
+  </ol>
+</div></section>
+
+<section class="sec alt env" id="environment"><div class="wrap g12">
+  <div class="s-l">
+    <p class="eyebrow">Environmental and climate solutions</p>
+    <h2>Measure the land. Understand the change.</h2>
+    <p class="intro">The same drone data answers environmental questions. We measure what changed, show the method and the dates, and let the evidence make the case.</p>
+  </div>
+  <div class="s-r">
+    <ul class="list">
+      <li>Baseline and change-detection maps</li>
+      <li>Flood and drainage mapping</li>
+      <li>Shoreline and wetland monitoring</li>
+      <li>Vegetation and canopy mapping</li>
+      <li>Site monitoring for environmental compliance</li>
+    </ul>
+    <p class="fine">Each result states the quantity measured, the method and the date range.</p>
+  </div>
+</div></section>
+
+<section class="sec about" id="about"><div class="wrap g12">
+  <div class="s-l">
+    <p class="eyebrow">About</p>
+    <h2>Named for a seed that travels.</h2>
+    <p class="intro">A samara is the winged seed of the maple. It spins like a helicopter blade and travels far from the tree on the wind. We work the same way: we fly, capture, and the result travels to wherever the decision is made.</p>
+    <p class="intro" style="margin-top:16px">Samara Geospatial is based in Chennai, India.</p>
+  </div>
+  <div class="s-r"><div class="person"><span class="eyebrow" style="margin:0">Founder</span><span class="nm">Naresh Kaviyarasan</span><span class="muted">Chennai, India</span></div></div>
+</div></section>
+
+<section class="sec contact on-hero" id="contact"><div class="wrap g12">
+  <div class="s-l">
+    <p class="eyebrow">Request a survey</p>
+    <h2>Tell us about the site.</h2>
+    <p class="lead">Fill in the form and WhatsApp opens with your message ready to send. We reply with a flight plan and the accuracy check we would use.</p>
+    <ol class="how">
+      <li><span class="n">1</span>Fill in the site, the area and what you need.</li>
+      <li><span class="n">2</span>WhatsApp opens with your message written for you.</li>
+      <li><span class="n">3</span>Press send. We reply with a plan.</li>
+    </ol>
+    <div class="alt-cta"><a class="btn btn-ghost" data-wa href="#contact">Chat on WhatsApp</a><p class="fine">Based in Chennai, India.</p></div>
+  </div>
+  <form class="s-r formcard" id="wa-form" autocomplete="on">
+    <div class="fld"><label for="f-name">Your name <span class="req">(required)</span></label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+    <div class="fld"><label for="f-org">Organisation <span class="req">(optional)</span></label><input id="f-org" name="org" type="text" autocomplete="organization"></div>
+    <div class="fld"><label for="f-loc">Site location <span class="req">(required)</span></label><input id="f-loc" name="loc" type="text" placeholder="Town, district or coordinates" required></div>
+    <div class="two">
+      <div class="fld"><label for="f-area">Area in km² <span class="req">(optional)</span></label><input id="f-area" name="area" type="number" min="0" step="any" inputmode="decimal"></div>
+      <div class="fld"><label for="f-when">Deadline <span class="req">(optional)</span></label><input id="f-when" name="when" type="text" placeholder="e.g. 30 Nov"></div>
+    </div>
+    <div class="fld"><label for="f-need">What do you need?</label><select id="f-need" name="need"><option>Large-scale mapping</option><option>Data processing</option><option>Environmental solutions</option><option>Not sure yet</option></select></div>
+    <div class="fld"><label for="f-msg">Details <span class="req">(optional)</span></label><textarea id="f-msg" name="msg" rows="3"></textarea></div>
+    <button class="btn btn-accent" type="submit">Send on WhatsApp</button>
+    <p class="status" role="status" aria-live="polite"></p>
+  </form>
+</div></section>
+</main>
+
+<footer class="ft"><div class="wrap g12">
+  <div class="l"><svg class="mark mark-l"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Samara Geospatial mark"><circle cx="60" cy="60" r="52" fill="none" stroke="#283A72" stroke-width="2.5"/><path d="M60 2 V12 M60 108 V118 M2 60 H12 M108 60 H118" stroke="#283A72" stroke-width="2.5" stroke-linecap="round"/><path d="M60 60 C56 42 66 24 90 18 C94 40 82 56 60 60 Z" fill="#283A72"/><path d="M60 60 C56 42 66 24 90 18 C94 40 82 56 60 60 Z" fill="#E3A33B" transform="rotate(180 60 60)"/><circle cx="60" cy="60" r="6" fill="#283A72"/></svg><svg class="mark mark-d"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Samara Geospatial mark"><circle cx="60" cy="60" r="52" fill="none" stroke="#FFFFFF" stroke-width="2.5"/><path d="M60 2 V12 M60 108 V118 M2 60 H12 M108 60 H118" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/><path d="M60 60 C56 42 66 24 90 18 C94 40 82 56 60 60 Z" fill="#FFFFFF"/><path d="M60 60 C56 42 66 24 90 18 C94 40 82 56 60 60 Z" fill="#E3A33B" transform="rotate(180 60 60)"/><circle cx="60" cy="60" r="6" fill="#FFFFFF"/></svg><p>© 2026 Samara Geospatial<br>Large-scale drone mapping, geospatial data and environmental solutions.</p></div>
+  <p class="r">Precision from above. Answers on the ground.</p>
+</div></footer>
+
+<script>
+(function(){
+  var WA="917051299371"; // WhatsApp number: country code + number, digits only
+  var links=document.querySelectorAll("[data-wa]");
+  for(var i=0;i<links.length;i++){links[i].href="https://wa.me/"+WA;links[i].target="_blank";links[i].rel="noopener";}
+  var f=document.getElementById("wa-form"); if(!f) return;
+  var st=f.querySelector(".status");
+  f.addEventListener("submit",function(e){
+    e.preventDefault();
+    var d=new FormData(f), lines=["Hello Samara Geospatial, I would like to request a survey.",""];
+    function add(label,key,suffix){var v=String(d.get(key)||"").trim(); if(v) lines.push(label+": "+v+(suffix||""));}
+    add("Name","name"); add("Organisation","org"); add("Site location","loc"); add("Area","area"," km\u00B2");
+    add("Need","need"); add("Deadline","when"); add("Details","msg");
+    var url="https://wa.me/"+WA+"?text="+encodeURIComponent(lines.join("\n"));
+    window.open(url,"_blank","noopener");
+    var a=document.createElement("a"); a.href=url; a.target="_blank"; a.rel="noopener"; a.textContent="Open WhatsApp";
+    st.textContent="Opening WhatsApp with your message. If nothing happens, "; st.appendChild(a); st.appendChild(document.createTextNode("."));
+  });
+})();
+</script>
+</body>
+</html>
